@@ -6,7 +6,6 @@ public class MergeSort {
         if (array == null) {
             System.out.println("Массив пуст!");
         }
-
         if (arrayLength < 2) {
             return;
         }
