@@ -4,6 +4,6 @@ target/
 .target/
 *.ipr
 /.idea/
-src.test/
+.src/test/
 .src/main/java/randomizer/
 .src/main/java/TimeManager/
