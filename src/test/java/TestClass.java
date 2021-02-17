@@ -1,7 +1,9 @@
 import jdk.swing.interop.SwingInterOpUtils;
 import randomizer.Randomizer;
+import search.BinarySearch;
 import sorts.BubbleSort;
 import sorts.InsertionSort;
+import timemanager.TimeManager;
 
 import java.sql.SQLOutput;
 import java.util.*;
@@ -15,23 +17,8 @@ public class TestClass {
 
         System.out.println(Arrays.toString(arr));
 
-        System.out.println(Arrays.toString(BubbleSort.bubbleSort(arr)));
+        System.out.println(Arrays.toString(InsertionSort.insertionSort(arr)));
 
-        System.out.println(TestClass.bs(arr, 10, 0, arr.length - 1));
-
-    }
-
-    private static int bs(int[] arr, int key, int start, int finish) {
-        int mid = start + (finish - start) / 2;
-
-        if (start > finish) {
-            return -1;
-        } else if (key < arr[mid]) {
-            return bs(arr, key, start, mid - 1);
-        } else if (key > arr[mid]) {
-            return bs(arr, key, mid + 1, finish);
-        } else
-            return mid;
     }
 
 
