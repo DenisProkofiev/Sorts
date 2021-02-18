@@ -12,22 +12,22 @@ public class MergeSort {
         int mid = arrayLength / 2;
 
         int[] leftSideArray = new int[mid];
-        int[] rightArray = new int[arrayLength - mid];
+        int[] rightSideArray = new int[arrayLength - mid];
 
         for (int i = 0; i < mid; i++) {
             leftSideArray[i] = array[i];
         }
 
         for (int j = mid; j < arrayLength; j++) {
-            rightArray[j - mid] = array[j];
+            rightSideArray[j - mid] = array[j];
         }
 
         // System.arraycopy(array, 0, leftSideArray, 0, array.length / 2);
         // System.arraycopy(array, array.length / 2, rightArray, 0, array.length - (array.length / 2));
         RecursionMergeSort(leftSideArray, mid);
-        RecursionMergeSort(rightArray, arrayLength - mid);
+        RecursionMergeSort(rightSideArray, arrayLength - mid);
 
-        merge(array, leftSideArray, rightArray, mid, arrayLength - mid);
+        merge(array, leftSideArray, rightSideArray, mid, arrayLength - mid);
     }
 
 
